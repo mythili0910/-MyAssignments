@@ -25,10 +25,13 @@ public class DeleteLead {
 		driver.findElement(By.xpath("//input[@name='phoneCountryCode']")).sendKeys("912");
 		driver.findElement(By.xpath("//input[@name='phoneAreaCode']")).sendKeys("778");
 		driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys("5567");
+		//click FindLeads button
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
-		
-		driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a[@class='linktext'])[1]")).click();
-		
+
+		//click on the first row of leads list
+		driver.findElement(By.xpath("//div[contains(@class,'col-partyId')]/a[@class='linktext'])[1]")).click();
+		driver.findElement(By.xpath("//a[contains(@class,'Dangerous')]")).click();
+			
 		
 
 	}
